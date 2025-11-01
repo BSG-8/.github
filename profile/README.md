@@ -38,7 +38,7 @@ gibi riskleri analiz etmek ve bu tehditlere karşı **anomali tespiti**, **gerç
 
 | Ad Soyad | Senaryo Başlığı |
 |-----------|----------------|
-| **Sena Köse** | Firmware Manipülasyonu ve SWAT Analizi |
+| **Sena Köse** | Firmware Manipülasyonu |
 | **Hüseyin Enes Ertürk** | Hayalet Şarj ile Enerji Hırsızlığı |
 | **Yusuf Kaya** | Operasyonel Felç (DoS) |
 | **Muhammed Emin** | CAN Bus-Off Saldırısı |
