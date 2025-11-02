@@ -42,6 +42,7 @@ gibi riskleri analiz etmek ve bu tehditlere karşı **anomali tespiti**, **gerç
 | **Hüseyin Enes Ertürk** | Hayalet Şarj ile Enerji Hırsızlığı |
 | **Yusuf Kaya** | Operasyonel Felç (DoS) |
 | **Muhammed Emin** | CAN Bus-Off Saldırısı |
+| **Beşir Can Barutçu** | CAN Bus Debug ile backdoor oluşturulması |
 
 ---
 
