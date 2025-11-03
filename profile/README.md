@@ -43,6 +43,7 @@ gibi riskleri analiz etmek ve bu tehditlere karşı **anomali tespiti**, **gerç
 | **Yusuf Kaya** | Operasyonel Felç (DoS) |
 | **Muhammed Emin** | CAN Bus-Off Saldırısı |
 | **Beşir Can Barutçu** | CAN Bus Debug ile backdoor oluşturulması |
+| **Seyhan ŞAHİN** | Harici CAN Yansıtma (Reflection) ile Dahili Güç Elektroniği Manipülasyonu |
 
 ---
 
