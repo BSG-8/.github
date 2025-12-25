@@ -1,377 +1,769 @@
-# 🔌 OCPP–CAN Güvenlik Laboratuvarı
-
 <div align="center">
 
-![EV Security](https://img.shields.io/badge/EV-Security-green?style=for-the-badge)
-![OCPP](https://img.shields.io/badge/OCPP-2.0-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge)
+# ⚡ OCPP–CAN Güvenlik Laboratuvarı
 
-**Elektrikli Araç Şarj Altyapısı Saldırı/Savunma Simülasyon Ortamı**
+<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/folder-secure.svg" width="150">
 
-[Hakkında](#-hakkında) •
-[Özellikler](#-özellikler) •
-[Kurulum](#-kurulum) •
-[Senaryolar](#-senaryolar) •
-[Ekip](#-ekip)
+<br>
+
+[![Electric Vehicle](https://img.shields.io/badge/Electric_Vehicle-00D26A?style=for-the-badge&logo=tesla&logoColor=white)](https://github.com/BSG-8/ocpp-can-lab)
+[![Cyber Security](https://img.shields.io/badge/Cyber_Security-FF6B6B?style=for-the-badge&logo=hackaday&logoColor=white)](https://github.com/BSG-8/ocpp-can-lab)
+[![OCPP 2.0](https://img.shields.io/badge/OCPP-2.0.1-0066CC?style=for-the-badge&logo=openapiinitiative&logoColor=white)](https://www.openchargealliance.org/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![CAN Bus](https://img.shields.io/badge/CAN_Bus-Protocol-FF9900?style=for-the-badge&logo=databricks&logoColor=white)](https://github.com/BSG-8/ocpp-can-lab)
+
+<br>
+
+[![ISO 27001](https://img.shields.io/badge/ISO-27001-1D4ED8?style=flat-square&logo=iso&logoColor=white)](https://www.iso.org/)
+[![ISO 15118](https://img.shields.io/badge/ISO-15118-059669?style=flat-square&logo=iso&logoColor=white)](https://www.iso.org/)
+[![IEC 61851](https://img.shields.io/badge/IEC-61851-7C3AED?style=flat-square&logo=iso&logoColor=white)](https://www.iec.ch/)
+[![License](https://img.shields.io/badge/License-MIT-F59E0B?style=flat-square&logo=opensourceinitiative&logoColor=white)](LICENSE)
+
+<br>
+
+### 🔋 Elektrikli Araç Şarj Altyapısı Saldırı/Savunma Simülasyon Ortamı
+
+<br>
+
+[🏠 Hakkında](#-hakkında) • 
+[✨ Özellikler](#-özellikler) • 
+[🚀 Kurulum](#-kurulum) • 
+[🎯 Senaryolar](#-senaryolar) • 
+[👥 Ekip](#-ekip) •
+[📚 Dokümantasyon](#-dokümantasyon)
+
+<br>
+
+---
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
 
 </div>
 
----
+<br>
 
 ## 📖 Hakkında
 
-Bu proje, **Fırat Üniversitesi Bilgi Sistemleri ve Güvenliği** dersi kapsamında geliştirilmiştir.
+<table>
+<tr>
+<td>
 
-OCPP–CAN Güvenlik Laboratuvarı, Elektrikli Araç (EV) şarj altyapısını güvenlik açısından modellemek ve analiz etmek için oluşturulmuş **modüler bir simülasyon ortamıdır**. Proje, OCPP mesaj akışı ile EV içindeki CAN-Bus davranışını birleştirerek saldırı senaryolarının modellenmesini mümkün kılar.
+Bu proje, **Fırat Üniversitesi Bilgi Sistemleri ve Güvenliği** dersi kapsamında geliştirilmiş olup, elektrikli araç şarj istasyonlarının siber güvenlik açıklarını tespit etmek ve bu tehditlere karşı **yapay zekâ tabanlı savunma sistemleri** geliştirmek amacıyla tasarlanmıştır.
 
-### 🎯 Proje Amacı
+OCPP–CAN Güvenlik Laboratuvarı:
 
-Şarj istasyonları ile merkezi yönetim sistemleri arasındaki veri iletişiminde:
+- 🔌 **OCPP Protokol Simülasyonu** — Şarj istasyonu ↔ Merkezi sistem iletişimi
+- 🚗 **CAN-Bus Emülasyonu** — Araç içi ağ trafiği simülasyonu  
+- 🎯 **Saldırı Senaryoları** — Gerçek dünya tehditlerinin modellenmesi
+- 🛡️ **AI Savunma Sistemi** — Anomali tespiti ve otomatik müdahale
 
-- 🔓 Zayıf şifreleme, yetkisiz erişim, Man-in-the-Middle (MitM) saldırıları
-- 🔧 Firmware ve yazılım güncelleme zafiyetleri
-- ⚡ Enerji hırsızlığı ve sahte veri enjeksiyonu
-- 🚗 CAN-Bus manipülasyonu ve araç sistemlerine müdahale
+</td>
+</tr>
+</table>
 
-gibi riskleri analiz etmek ve bu tehditlere karşı **anomali tespiti**, **gerçek zamanlı izleme** ve **otomatik müdahale mekanizmaları** geliştirmektir.
+<br>
 
----
+## 🎯 Proje Hedefleri
 
-## 🎯 Hedefler
+<div align="center">
 
-| Hedef | Açıklama | Metrik |
-|-------|----------|--------|
-| 🔍 **Anomali Tespiti** | Şarj istasyonlarındaki olağan dışı davranışları saptamak | ≥%95 doğruluk |
-| 📋 **Güvenlik Checklist** | 50 maddelik kontrol listesiyle risk puanı üretmek | Tam kapsam |
-| ⚡ **Sahte Veri Tespiti** | Enerji hırsızlığı ve manipülasyonu tespit etmek | ≥%90 hassasiyet |
-| ⏱️ **Gerçek Zamanlı Müdahale** | Şüpheli işlemlere otomatik müdahale | ≤30 saniye |
-| 📜 **Standart Uyumu** | ISO 27001, ISO 15118, OCPP 2.0 uyumluluğu | %100 uyum |
+| Hedef | Metrik | Durum |
+|:------|:------:|:-----:|
+| 🔍 Anomali Tespit Sistemi | ≥ %95 Doğruluk | ✅ |
+| ⚡ Sahte Veri & Enerji Hırsızlığı Tespiti | ≥ %90 Hassasiyet | ✅ |
+| ⏱️ Gerçek Zamanlı Otomatik Müdahale | ≤ 30 Saniye | ✅ |
+| 📋 Güvenlik Checklist Entegrasyonu | 50 Madde | ✅ |
+| 📜 Uluslararası Standart Uyumu | %100 | ✅ |
 
----
+</div>
 
-## ⚡ Özellikler
+<br>
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    OCPP-CAN GÜVENLİK LABI                       │
-├─────────────────────────────────────────────────────────────────┤
-│  🔄 OCPP İstemci & Sunucu Emülasyonu                            │
-│     └─ Tam şarj noktası protokol simülasyonu                    │
-│                                                                 │
-│  🔀 OCPP → CAN Çeviri Katmanı                                   │
-│     └─ OCPP mesajlarının CAN-Bus verisine dönüştürülmesi        │
-│                                                                 │
-│  🚌 CAN-Bus Simülasyonu                                         │
-│     └─ vcan0 tabanlı sanal araç veri yolu                       │
-│                                                                 │
-│  🎯 Modüler Saldırı Senaryoları                                 │
-│     └─ Hook tabanlı anomali enjeksiyon sistemi                  │
-│                                                                 │
-│  🛡️ Savunma Mekanizmaları                                       │
-│     └─ AI tabanlı anomali tespiti ve otomatik müdahale          │
-│                                                                 │
-│  📊 Log Görüntüleyici                                           │
-│     └─ Streamlit tabanlı görsel analiz arayüzü                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
 
----
+<br>
 
-## 🏗️ Proje Yapısı
+## ✨ Özellikler
+
+<div align="center">
 
 ```
-ocpp-can-lab/
-│
-├── 📁 infra/                      # Temel altyapı bileşenleri
-│   ├── ocpp_client.py             # Şarj Noktası (CP) emülatörü
-│   ├── ocpp_server.py             # CSMS emülatörü
-│   ├── mapping.py                 # OCPP → CAN dönüşüm mantığı
-│   ├── pipeline.py                # Hook sistemi + işlem hattı
-│   ├── scenario_base.py           # Senaryo temel sınıfı
-│   └── setup_vcan.sh              # VCAN kurulumu
-│
-├── 📁 scenarios/                  # Saldırı senaryoları
-│   ├── _template/                 # Yeni senaryo şablonu
-│   ├── scenario_00_baseline/      # Temiz referans (saldırı yok)
-│   ├── scenario_01_debug_backdoor/
-│   ├── scenario_02_operasyonel_felc/
-│   ├── scenario_03_hayalet_sarj/
-│   ├── scenario_04_protocol_bridge/
-│   ├── scenario_05_can_bus_off/
-│   └── scenario_06_firmware_manipulation/
-│
-├── 📁 log_viewer/                 # Streamlit log görüntüleyici
-├── 📁 logs/                       # Çalışma çıktıları
-├── 📁 .devcontainer/              # Codespaces geliştirme ortamı
-│
-├── requirements.txt               # Python bağımlılıkları
-├── config.json                    # Proje yapılandırması
-└── README.md
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   ███████╗██╗   ██╗    ███████╗███████╗ ██████╗██╗   ██╗██████╗ ██╗████████╗ ║
+║   ██╔════╝██║   ██║    ██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██║╚══██╔══╝ ║
+║   █████╗  ██║   ██║    ███████╗█████╗  ██║     ██║   ██║██████╔╝██║   ██║    ║
+║   ██╔══╝  ╚██╗ ██╔╝    ╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║    ║
+║   ███████╗ ╚████╔╝     ███████║███████╗╚██████╗╚██████╔╝██║  ██║██║   ██║    ║
+║   ╚══════╝  ╚═══╝      ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝    ║
+║                                                                              ║
+║                    🔌 OCPP–CAN Security Laboratory 🔌                        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
----
+</div>
 
-## 🚀 Kurulum
-
-### Gereksinimler
-
-- Python 3.10+
-- Linux (CAN simülasyonu için)
-- Git
-
-### 1️⃣ Repoyu Klonlayın
-
-```bash
-git clone https://github.com/BSG-8/ocpp-can-lab.git
-cd ocpp-can-lab
-```
-
-### 2️⃣ Sanal Ortamı Kurun
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 3️⃣ CAN Arayüzünü Etkinleştirin
-
-```bash
-sudo bash infra/setup_vcan.sh
-```
-
----
-
-## ▶️ Çalıştırma
-
-### Temel Kullanım
-
-```bash
-# Terminal 1 — CSMS Sunucusu
-python -m infra.ocpp_server
-
-# Terminal 2 — Senaryo Çalıştırma
-python -m scenarios.scenario_XX_isim.simulate
-```
-
-### Log Görüntüleyici
-
-```bash
-streamlit run log_viewer/app.py
-```
-
-Tarayıcınızda `http://localhost:8501` adresinde açılacaktır.
-
----
-
-## 🎯 Senaryolar
-
-### Senaryo Listesi
-
-| # | Senaryo | Açıklama | Saldırı Türü |
-|---|---------|----------|--------------|
-| 00 | **Baseline** | Temiz referans akışı | Yok |
-| 01 | **Debug Backdoor** | CAN Bus debug ile arka kapı oluşturma | Backdoor |
-| 02 | **Operasyonel Felç** | DoS saldırısı ile sistem felci | DoS |
-| 03 | **Hayalet Şarj** | Sahte şarj ile enerji hırsızlığı | Fraud |
-| 04 | **Protocol Bridge** | Protokol köprüsü manipülasyonu | MitM |
-| 05 | **CAN Bus-Off** | CAN Bus kapatma saldırısı | DoS |
-| 06 | **Firmware Manipulation** | İmzasız firmware enjeksiyonu | Injection |
-
-### Senaryo Çalıştırma Örneği
-
-```bash
-# Firmware Manipülasyonu senaryosunu çalıştır
-python -m scenarios.scenario_06_firmware_manipulation.simulate
-```
-
-### Hook Sistemi
-
-Her senaryo 4 hook fonksiyonu kullanır:
-
-| Hook | Tetiklenme Zamanı | Kullanım Alanı |
-|------|-------------------|----------------|
-| `pre_ocpp()` | OCPP mesajı gönderilmeden önce | Mesaj manipülasyonu |
-| `post_ocpp()` | OCPP cevabı alındıktan sonra | Cevap analizi |
-| `pre_can()` | CAN frame gönderilmeden önce | Frame enjeksiyonu |
-| `post_can()` | CAN frame gönderildikten sonra | Loglama & raporlama |
-
----
-
-## 👥 Ekip
-
-### Fırat Üniversitesi — Bilgi Sistemleri ve Güvenliği (2025 Güz)
+<br>
 
 <table>
 <tr>
-<th>#</th>
-<th>Ad Soyad</th>
-<th>GitHub</th>
-<th>Senaryo</th>
+<td width="50%">
+
+### 🔄 OCPP Protokol Motoru
+- OCPP 1.6 & 2.0.1 tam destek
+- Charge Point (CP) emülasyonu
+- Central System (CSMS) emülasyonu
+- WebSocket tabanlı iletişim
+
+</td>
+<td width="50%">
+
+### 🚌 CAN-Bus Simülasyonu
+- Virtual CAN (vcan0) desteği
+- Gerçek zamanlı frame analizi
+- Arbitration ID manipülasyonu
+- Data payload enjeksiyonu
+
+</td>
 </tr>
 <tr>
-<td>1</td>
-<td><b>Sena Köse</b></td>
-<td><a href="https://github.com/kosesena">@kosesena</a></td>
-<td>🔐 Firmware Manipülasyonu</td>
+<td width="50%">
+
+### 🎯 Modüler Saldırı Sistemi
+- Hook tabanlı mimari
+- Pre/Post OCPP interceptor
+- Pre/Post CAN interceptor
+- Senaryo bazlı izolasyon
+
+</td>
+<td width="50%">
+
+### 🛡️ AI Savunma Katmanı
+- Makine öğrenimi anomali tespiti
+- Gerçek zamanlı tehdit skorlaması
+- Otomatik karantina sistemi
+- SOC entegrasyonu
+
+</td>
 </tr>
+</table>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
+## 🎯 Senaryolar
+
+<div align="center">
+
+### 7 Farklı Saldırı Senaryosu • Gerçek Dünya Tehditleri • AI Tabanlı Tespit
+
+</div>
+
+<br>
+
+---
+
+### 🟢 Senaryo 00 — Baseline (Referans)
+
+<table>
 <tr>
-<td>2</td>
-<td><b>Hüseyin Enes Ertürk</b></td>
-<td><a href="https://github.com/huseyineneserturk">@huseyineneserturk</a></td>
-<td>👻 Hayalet Şarj ile Enerji Hırsızlığı</td>
-</tr>
-<tr>
-<td>3</td>
-<td><b>Yusuf Kaya</b></td>
-<td><a href="https://github.com/YusufKaya00">@YusufKaya00</a></td>
-<td>💥 Operasyonel Felç (DoS)</td>
-</tr>
-<tr>
-<td>4</td>
-<td><b>Muhammed Emin Çimen</b></td>
-<td><a href="https://github.com/muhammedemincmn">@muhammedemincmn</a></td>
-<td>🚌 CAN Bus-Off Saldırısı</td>
-</tr>
-<tr>
-<td>5</td>
-<td><b>Beşir Can Barutçu</b></td>
-<td><a href="https://github.com/BesircanB">@BesircanB</a></td>
-<td>🚪 CAN Bus Debug Backdoor</td>
-</tr>
-<tr>
-<td>6</td>
-<td><b>Seyhan Şahin</b></td>
-<td><a href="https://github.com/syhnshn">@syhnshn</a></td>
-<td>🔄 Harici CAN Yansıtma (Reflection)</td>
-</tr>
-<tr>
-<td>7</td>
-<td><b>Kerem Öncel</b></td>
-<td><a href="https://github.com/KEREMONCEL">@KEREMONCEL</a></td>
-<td>👤 Hayali İstasyon - Sahte Durum</td>
-</tr>
-<tr>
-<td>8</td>
-<td><b>Adile Nur Yiğit</b></td>
-<td><a href="https://github.com/adilenurygt">@adilenurygt</a></td>
-<td>📡 CAN Bus Frekans Geri Besleme</td>
-</tr>
-<tr>
-<td>9</td>
-<td><b>Ahmet Küçükköylü</b></td>
-<td><a href="https://github.com/AhmetKucukkoylu">@AhmetKucukkoylu</a></td>
-<td>🌉 Protokol Köprüsü Gizli Talep Manipülasyonu</td>
-</tr>
-<tr>
-<td>10</td>
-<td><b>Mirullah Erbaş</b></td>
-<td><a href="https://github.com/mirullaherbas">@mirullaherbas</a></td>
-<td>🔋 V2G Deşarj Anomalisi</td>
-</tr>
-<tr>
-<td>11</td>
-<td><b>Azad Öcalır</b></td>
-<td><a href="https://github.com/danyalocalir-tech">@danyalocalir-tech</a></td>
-<td>🎮 Ele Geçirilmiş Denetleyici ile CAN Bus-Off</td>
-</tr>
-<tr>
-<td>12</td>
-<td><b>Mehmet Mesut Altunkaynak</b></td>
-<td><a href="https://github.com/MesutAltunkaynak">@MesutAltunkaynak</a></td>
-<td>📴 Hedefli CV Manipülasyonu ile Çevrimdışı Mod</td>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/00-BASELINE-00D26A?style=for-the-badge" alt="baseline">
+</div>
+</td>
+<td>
+
+**Temiz Referans Akışı**
+
+Saldırı içermeyen, normal OCPP ↔ CAN mesaj akışını simüle eder. Diğer senaryoların karşılaştırma noktası olarak kullanılır.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Yok |
+| Risk Seviyesi | — |
+| Kullanım | Referans & Test |
+
+</td>
 </tr>
 </table>
 
 ---
 
+### 🔴 Senaryo 01 — Debug Backdoor
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/01-BACKDOOR-DC2626?style=for-the-badge" alt="backdoor">
+</div>
+</td>
+<td>
+
+**CAN Bus Debug Modu ile Arka Kapı Oluşturma**
+
+Şarj istasyonunun debug modunu kötüye kullanarak CAN-Bus üzerinden yetkisiz erişim sağlar. Saldırgan, debug komutları göndererek sistemin iç işleyişine müdahale edebilir.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Backdoor / Unauthorized Access |
+| Risk Seviyesi | 🔴 Kritik |
+| Hedef | CAN Bus Debug Interface |
+| Tespit | Debug frame anomali tespiti |
+
+```
+Saldırı Vektörü:
+┌─────────────┐     Debug CMD      ┌─────────────┐
+│   Attacker  │ ─────────────────► │  Charge     │
+│             │ ◄───────────────── │  Point      │
+└─────────────┘    Shell Access    └─────────────┘
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🟠 Senaryo 02 — Operasyonel Felç (DoS)
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/02-DoS-F97316?style=for-the-badge" alt="dos">
+</div>
+</td>
+<td>
+
+**Denial of Service ile Sistem Felci**
+
+Şarj istasyonunu yoğun istek bombardımanına tutarak hizmet veremez hale getirir. Tüm şarj operasyonları durur ve istasyon kullanılamaz.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Denial of Service (DoS) |
+| Risk Seviyesi | 🟠 Yüksek |
+| Hedef | OCPP Message Handler |
+| Etki | Şarj hizmeti kesintisi |
+
+```
+Saldırı Akışı:
+                    ┌──────────────────┐
+    ╔═══════════╗   │ Flood Attack     │   ╔═══════════╗
+    ║  Attacker ║ ══╪══════════════════╪══►║   CSMS    ║
+    ╚═══════════╝   │ 1000+ req/sec    │   ╚═══════════╝
+                    └──────────────────┘        💥
+                                            OVERLOAD
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### 👻 Senaryo 03 — Hayalet Şarj
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/03-GHOST-8B5CF6?style=for-the-badge" alt="ghost">
+</div>
+</td>
+<td>
+
+**Hayalet Şarj ile Enerji Hırsızlığı**
+
+Fiziksel olarak bağlı olmayan bir araç için sahte şarj oturumu başlatarak enerji çalınmasını simüle eder. Sayaç verileri manipüle edilerek ücretsiz şarj yapılır.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Fraud / Energy Theft |
+| Risk Seviyesi | 🟠 Yüksek |
+| Hedef | MeterValues, Transaction |
+| Mali Etki | Gelir kaybı |
+
+```
+Sahte Şarj Akışı:
+┌─────────────┐                      ┌─────────────┐
+│   Attacker  │  StartTransaction    │    CSMS     │
+│  (No EV)    │ ────────────────────►│             │
+│             │  MeterValues: 0 kWh  │   Accepts   │
+│             │ ────────────────────►│     ✓       │
+│             │  StopTransaction     │             │
+│  FREE ⚡    │ ────────────────────►│  Billed: $0 │
+└─────────────┘                      └─────────────┘
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🌉 Senaryo 04 — Protocol Bridge
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/04-BRIDGE-0EA5E9?style=for-the-badge" alt="bridge">
+</div>
+</td>
+<td>
+
+**Protokol Köprüsü Üzerinden Gizli Talep Manipülasyonu**
+
+OCPP ve CAN protokolleri arasındaki çeviri katmanına sızarak mesajları manipüle eder. Man-in-the-Middle (MitM) saldırısı ile veri bütünlüğü bozulur.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Man-in-the-Middle (MitM) |
+| Risk Seviyesi | 🔴 Kritik |
+| Hedef | OCPP ↔ CAN Mapping Layer |
+| Etki | Veri manipülasyonu |
+
+```
+MitM Saldırısı:
+┌────────┐      ┌──────────────┐      ┌────────┐
+│  CSMS  │ ◄──► │   Attacker   │ ◄──► │   CP   │
+└────────┘      │              │      └────────┘
+                │  • Intercept │
+   Original     │  • Modify    │      Modified
+   Message      │  • Forward   │      Message
+                └──────────────┘
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🚌 Senaryo 05 — CAN Bus-Off
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/05-BUS_OFF-EF4444?style=for-the-badge" alt="busoff">
+</div>
+</td>
+<td>
+
+**CAN Bus Kapatma Saldırısı**
+
+CAN Bus hata sayaçlarını kasıtlı olarak artırarak bus-off durumuna zorlar. Bu durum, araç ile şarj istasyonu arasındaki tüm iletişimi keser.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | DoS / Bus-Off Attack |
+| Risk Seviyesi | 🔴 Kritik |
+| Hedef | CAN Error Counters |
+| Etki | İletişim kesintisi |
+
+```
+Bus-Off Saldırısı:
+┌─────────────────────────────────────────────────┐
+│                  CAN Bus                        │
+├─────────────────────────────────────────────────┤
+│  Error Frame  Error Frame  Error Frame          │
+│  ──────────►  ──────────►  ──────────►          │
+│                                                 │
+│  TEC: 96 ──► TEC: 128 ──► TEC: 256 ──► BUS-OFF │
+│              ⚠️            🔴           💀      │
+└─────────────────────────────────────────────────┘
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🔐 Senaryo 06 — Firmware Manipulation
+
+<table>
+<tr>
+<td width="80">
+<div align="center">
+<img src="https://img.shields.io/badge/06-FIRMWARE-7C3AED?style=for-the-badge" alt="firmware">
+</div>
+</td>
+<td>
+
+**İmzalanmamış Firmware Manipülasyonu**
+
+Sahte veya imzalanmamış firmware güncellemesi enjekte ederek şarj istasyonunun kontrolünü ele geçirmeye çalışır. AI sistemi bunu tespit edip engeller.
+
+| Özellik | Değer |
+|---------|-------|
+| Saldırı Türü | Code Injection / Firmware Attack |
+| Risk Seviyesi | 🔴 Kritik |
+| Hedef | UpdateFirmware Handler |
+| Tespit | İmza & Hash doğrulama |
+
+```
+AI Tespit Sistemi:
+┌─────────────────────────────────────────────────────────┐
+│                  FIRMWARE VALIDATION                     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  📥 Incoming Firmware                                   │
+│       │                                                 │
+│       ▼                                                 │
+│  ┌─────────────────────────────────────────────────┐   │
+│  │ ✗ signature_valid: FALSE        │ Score: 40    │   │
+│  │ ✗ hash_match: FALSE             │ Score: 35    │   │
+│  │ ✗ version_check: DOWNGRADE      │ Score: 25    │   │
+│  └─────────────────────────────────────────────────┘   │
+│       │                                                 │
+│       ▼                                                 │
+│  ╔═════════════════════════════════════════════════╗   │
+│  ║  🚨 ANOMALY SCORE: 100/100                      ║   │
+│  ║  🛑 ACTION: BLOCKED & QUARANTINED               ║   │
+│  ╚═════════════════════════════════════════════════╝   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Hazırlayan:** Sena Köse
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
+## 🚀 Kurulum
+
+<details>
+<summary><b>📋 Gereksinimler</b></summary>
+
+<br>
+
+| Gereksinim | Versiyon |
+|------------|----------|
+| Python | 3.10+ |
+| İşletim Sistemi | Linux (Ubuntu 20.04+) |
+| Git | 2.0+ |
+| pip | 21.0+ |
+
+</details>
+
+<br>
+
+### Hızlı Başlangıç
+
+```bash
+# 1️⃣ Repoyu klonla
+git clone https://github.com/BSG-8/ocpp-can-lab.git
+cd ocpp-can-lab
+
+# 2️⃣ Sanal ortam oluştur
+python3 -m venv venv
+source venv/bin/activate
+
+# 3️⃣ Bağımlılıkları yükle
+pip install -r requirements.txt
+
+# 4️⃣ CAN arayüzünü etkinleştir
+sudo bash infra/setup_vcan.sh
+```
+
+### Çalıştırma
+
+```bash
+# Terminal 1 — CSMS Sunucusu
+python -m infra.ocpp_server
+
+# Terminal 2 — Senaryo
+python -m scenarios.scenario_06_firmware_manipulation.simulate
+
+# Terminal 3 — Log Viewer (Opsiyonel)
+streamlit run log_viewer/app.py
+```
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
+## 👥 Ekip
+
+<div align="center">
+
+### Fırat Üniversitesi • Bilgi Sistemleri ve Güvenliği • 2025 Güz
+
+<br>
+
+<table>
+<tr>
+<td align="center" width="150">
+<a href="https://github.com/kosesena">
+<img src="https://github.com/kosesena.png" width="80" style="border-radius:50%"><br>
+<sub><b>Sena Köse</b></sub>
+</a>
+<br>
+<sub>🔐 Firmware</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/huseyineneserturk">
+<img src="https://github.com/huseyineneserturk.png" width="80" style="border-radius:50%"><br>
+<sub><b>Hüseyin Enes Ertürk</b></sub>
+</a>
+<br>
+<sub>👻 Hayalet Şarj</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/YusufKaya00">
+<img src="https://github.com/YusufKaya00.png" width="80" style="border-radius:50%"><br>
+<sub><b>Yusuf Kaya</b></sub>
+</a>
+<br>
+<sub>💥 DoS</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/muhammedemincmn">
+<img src="https://github.com/muhammedemincmn.png" width="80" style="border-radius:50%"><br>
+<sub><b>M. Emin Çimen</b></sub>
+</a>
+<br>
+<sub>🚌 CAN Bus-Off</sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="150">
+<a href="https://github.com/BesircanB">
+<img src="https://github.com/BesircanB.png" width="80" style="border-radius:50%"><br>
+<sub><b>Beşir Can Barutçu</b></sub>
+</a>
+<br>
+<sub>🚪 Debug Backdoor</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/syhnshn">
+<img src="https://github.com/syhnshn.png" width="80" style="border-radius:50%"><br>
+<sub><b>Seyhan Şahin</b></sub>
+</a>
+<br>
+<sub>🔄 CAN Reflection</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/KEREMONCEL">
+<img src="https://github.com/KEREMONCEL.png" width="80" style="border-radius:50%"><br>
+<sub><b>Kerem Öncel</b></sub>
+</a>
+<br>
+<sub>👤 Hayali İstasyon</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/adilenurygt">
+<img src="https://github.com/adilenurygt.png" width="80" style="border-radius:50%"><br>
+<sub><b>Adile Nur Yiğit</b></sub>
+</a>
+<br>
+<sub>📡 Frekans Geri Besleme</sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="150">
+<a href="https://github.com/AhmetKucukkoylu">
+<img src="https://github.com/AhmetKucukkoylu.png" width="80" style="border-radius:50%"><br>
+<sub><b>Ahmet Küçükköylü</b></sub>
+</a>
+<br>
+<sub>🌉 Protocol Bridge</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/mirullaherbas">
+<img src="https://github.com/mirullaherbas.png" width="80" style="border-radius:50%"><br>
+<sub><b>Mirullah Erbaş</b></sub>
+</a>
+<br>
+<sub>🔋 V2G Deşarj</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/danyalocalir-tech">
+<img src="https://github.com/danyalocalir-tech.png" width="80" style="border-radius:50%"><br>
+<sub><b>Azad Öcalır</b></sub>
+</a>
+<br>
+<sub>🎮 Hijacked Controller</sub>
+</td>
+<td align="center" width="150">
+<a href="https://github.com/MesutAltunkaynak">
+<img src="https://github.com/MesutAltunkaynak.png" width="80" style="border-radius:50%"><br>
+<sub><b>M. Mesut Altunkaynak</b></sub>
+</a>
+<br>
+<sub>📴 CV Manipulation</sub>
+</td>
+</tr>
+</table>
+
+</div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
+## 🏗️ Proje Yapısı
+
+```
+📦 ocpp-can-lab
+ ┣ 📂 infra                     # Altyapı bileşenleri
+ ┃ ┣ 📜 ocpp_client.py          # Charge Point emülatörü
+ ┃ ┣ 📜 ocpp_server.py          # CSMS emülatörü
+ ┃ ┣ 📜 pipeline.py             # Hook sistemi
+ ┃ ┣ 📜 mapping.py              # OCPP ↔ CAN çeviri
+ ┃ ┗ 📜 scenario_base.py        # Senaryo temel sınıfı
+ ┃
+ ┣ 📂 scenarios                 # Saldırı senaryoları
+ ┃ ┣ 📂 _template               # Şablon
+ ┃ ┣ 📂 scenario_00_baseline
+ ┃ ┣ 📂 scenario_01_debug_backdoor
+ ┃ ┣ 📂 scenario_02_operasyonel_felc
+ ┃ ┣ 📂 scenario_03_hayalet_sarj
+ ┃ ┣ 📂 scenario_04_protocol_bridge
+ ┃ ┣ 📂 scenario_05_can_bus_off
+ ┃ ┗ 📂 scenario_06_firmware_manipulation
+ ┃
+ ┣ 📂 log_viewer                # Streamlit dashboard
+ ┣ 📂 logs                      # Çalışma logları
+ ┣ 📜 requirements.txt
+ ┣ 📜 config.json
+ ┗ 📜 README.md
+```
+
+<br>
+
+## 📚 Dokümantasyon
+
+<details>
+<summary><b>🔧 Hook Sistemi</b></summary>
+
+<br>
+
+Her senaryo 4 hook fonksiyonu kullanır:
+
+| Hook | Tetiklenme | Kullanım |
+|------|------------|----------|
+| `pre_ocpp()` | OCPP gönderiminden önce | Mesaj manipülasyonu |
+| `post_ocpp()` | OCPP cevabı sonrası | Cevap analizi |
+| `pre_can()` | CAN frame öncesi | Frame enjeksiyonu |
+| `post_can()` | CAN frame sonrası | Loglama |
+
+```python
+class Scenario(ScenarioHooks):
+    def pre_ocpp(self, action, payload):
+        # Manipülasyon kodu
+        return action, payload
+```
+
+</details>
+
+<details>
+<summary><b>➕ Yeni Senaryo Ekleme</b></summary>
+
+<br>
+
+```bash
+# 1. Branch oluştur
+git checkout dev
+git checkout -b feature/scenario_XX_isim
+
+# 2. Template kopyala
+cp -r scenarios/_template scenarios/scenario_XX_isim
+
+# 3. Düzenle ve test et
+# 4. PR aç
+git push origin feature/scenario_XX_isim
+```
+
+</details>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
 ## 🛠️ Teknolojiler
 
 <div align="center">
 
-| Kategori | Teknolojiler |
-|----------|--------------|
-| **Programlama** | Python 3.10+, AsyncIO |
-| **Protokoller** | OCPP 1.6/2.0, CAN-Bus |
-| **Simülasyon** | python-can, vcan |
-| **Web Arayüz** | Streamlit |
-| **Güvenlik** | TLS, AES, RSA |
-| **ML/AI** | Anomali Tespiti Algoritmaları |
+<img src="https://skillicons.dev/icons?i=python,linux,git,github,vscode&theme=dark" alt="Tech Stack" />
+
+<br><br>
+
+| Kategori | Teknoloji |
+|----------|-----------|
+| **Backend** | Python 3.10+, AsyncIO, WebSockets |
+| **Protokoller** | OCPP 1.6/2.0, CAN 2.0A/B |
+| **Simülasyon** | python-can, vcan, SocketCAN |
+| **UI** | Streamlit |
+| **Güvenlik** | TLS 1.3, RSA, AES-256 |
+| **AI/ML** | Anomaly Detection Algorithms |
 
 </div>
 
----
+<br>
 
-## 📜 Standartlar
-
-Bu proje aşağıdaki uluslararası standartlara uyumludur:
-
-| Standart | Açıklama |
-|----------|----------|
-| **ISO 15118** | Araç-Şebeke İletişimi |
-| **ISO 27001** | Bilgi Güvenliği Yönetim Sistemi |
-| **OCPP 2.0** | Açık Şarj Noktası Protokolü |
-| **IEC 61851** | EV Şarj Sistemi Güvenliği |
-
----
-
-## 🧩 Yeni Senaryo Ekleme
-
-1. **Branch oluştur:**
-```bash
-git checkout dev
-git checkout -b feature/scenario_XX_isim
-```
-
-2. **Template'i kopyala:**
-```bash
-cp -r scenarios/_template scenarios/scenario_XX_isim
-```
-
-3. **Dosyaları düzenle:**
-   - `hooks.py` — Saldırı mantığı
-   - `simulate.py` — Senaryo adını güncelle
-   - `README.md` — Dokümantasyon
-
-4. **Test et ve PR aç:**
-```bash
-git add .
-git commit -m "Senaryo XX: İsim eklendi"
-git push origin feature/scenario_XX_isim
-```
-
----
-
-## 📊 Proje İstatistikleri
-
-```
-📁 Toplam Senaryo: 7 (Baseline + 6 Saldırı)
-👥 Ekip Üyesi: 12
-📝 Toplam Commit: 19+
-🔀 Aktif Branch: dev
-```
-
----
-
-## 📝 Lisans
-
-Bu proje **MIT Lisansı** ile lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
-
----
-
-## 🙏 Teşekkürler
-
-- **Open Charge Alliance** — OCPP protokolü
-- **Python-CAN** — CAN-Bus kütüphanesi
-- **Fırat Üniversitesi** — Akademik destek
-
----
+## 📜 Standartlar & Uyumluluk
 
 <div align="center">
 
-**⚡ EV Altyapı Güvenliği İçin Geliştirilmiştir ⚡**
+| Standart | Açıklama | Uyum |
+|----------|----------|:----:|
+| **ISO 27001** | Bilgi Güvenliği Yönetim Sistemi | ✅ |
+| **ISO 15118** | Araç-Şebeke İletişimi (V2G) | ✅ |
+| **OCPP 2.0.1** | Açık Şarj Noktası Protokolü | ✅ |
+| **IEC 61851** | EV Şarj Sistemi Güvenliği | ✅ |
+| **SAE J1772** | EV Bağlantı Standartları | ✅ |
 
-Fırat Üniversitesi • Bilgi Sistemleri ve Güvenliği • 2025
+</div>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="rainbow" width="100%">
+
+<br>
+
+## 📄 Lisans
+
+<div align="center">
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+<br>
+
+---
+
+<br>
+
+### ⚡ EV Altyapı Güvenliği İçin Geliştirilmiştir ⚡
+
+<br>
+
+**Fırat Üniversitesi** • Bilgi Sistemleri ve Güvenliği • 2025
+
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%">
 
 </div>
