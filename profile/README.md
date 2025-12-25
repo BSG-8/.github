@@ -85,25 +85,6 @@ OCPP–CAN Güvenlik Laboratuvarı:
 
 ## ✨ Özellikler
 
-<div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║   ███████╗██╗   ██╗    ███████╗███████╗ ██████╗██╗   ██╗██████╗ ██╗████████╗ ║
-║   ██╔════╝██║   ██║    ██╔════╝██╔════╝██╔════╝██║   ██║██╔══██╗██║╚══██╔══╝ ║
-║   █████╗  ██║   ██║    ███████╗█████╗  ██║     ██║   ██║██████╔╝██║   ██║    ║
-║   ██╔══╝  ╚██╗ ██╔╝    ╚════██║██╔══╝  ██║     ██║   ██║██╔══██╗██║   ██║    ║
-║   ███████╗ ╚████╔╝     ███████║███████╗╚██████╗╚██████╔╝██║  ██║██║   ██║    ║
-║   ╚══════╝  ╚═══╝      ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝   ╚═╝    ║
-║                                                                              ║
-║                    🔌 OCPP–CAN Security Laboratory 🔌                        ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
-
-</div>
-
 <br>
 
 <table>
@@ -224,6 +205,8 @@ Saldırı Vektörü:
 └─────────────┘    Shell Access    └─────────────┘
 ```
 
+**Hazırlayan:** Beşir Can Barutçu
+
 </td>
 </tr>
 </table>
@@ -261,6 +244,8 @@ Saldırı Akışı:
                     └──────────────────┘        💥
                                             OVERLOAD
 ```
+
+**Hazırlayan:** Yusuf Kaya
 
 </td>
 </tr>
@@ -302,6 +287,8 @@ Sahte Şarj Akışı:
 └─────────────┘                      └─────────────┘
 ```
 
+**Hazırlayan:** Hüseyin Enes Ertürk
+
 </td>
 </tr>
 </table>
@@ -340,6 +327,8 @@ MitM Saldırısı:
    Message      │  • Forward   │      Message
                 └──────────────┘
 ```
+
+**Hazırlayan:** Ahmet Küçükköylü
 
 </td>
 </tr>
@@ -381,6 +370,8 @@ Bus-Off Saldırısı:
 │              ⚠️            🔴           💀      │
 └─────────────────────────────────────────────────┘
 ```
+
+**Hazırlayan:** Muhammed Emin Çimen
 
 </td>
 </tr>
@@ -505,116 +496,42 @@ streamlit run log_viewer/app.py
 
 <div align="center">
 
-### Fırat Üniversitesi • Bilgi Sistemleri ve Güvenliği • 2025 Güz
+### 🎓 Fırat Üniversitesi • Bilgi Sistemleri ve Güvenliği • 2025 Güz
 
 <br>
 
-<table>
-<tr>
-<td align="center" width="150">
-<a href="https://github.com/kosesena">
-<img src="https://github.com/kosesena.png" width="80" style="border-radius:50%"><br>
-<sub><b>Sena Köse</b></sub>
-</a>
-<br>
-<sub>🔐 Firmware</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/huseyineneserturk">
-<img src="https://github.com/huseyineneserturk.png" width="80" style="border-radius:50%"><br>
-<sub><b>Hüseyin Enes Ertürk</b></sub>
-</a>
-<br>
-<sub>👻 Hayalet Şarj</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/YusufKaya00">
-<img src="https://github.com/YusufKaya00.png" width="80" style="border-radius:50%"><br>
-<sub><b>Yusuf Kaya</b></sub>
-</a>
-<br>
-<sub>💥 DoS</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/muhammedemincmn">
-<img src="https://github.com/muhammedemincmn.png" width="80" style="border-radius:50%"><br>
-<sub><b>M. Emin Çimen</b></sub>
-</a>
-<br>
-<sub>🚌 CAN Bus-Off</sub>
-</td>
-</tr>
-<tr>
-<td align="center" width="150">
-<a href="https://github.com/BesircanB">
-<img src="https://github.com/BesircanB.png" width="80" style="border-radius:50%"><br>
-<sub><b>Beşir Can Barutçu</b></sub>
-</a>
-<br>
-<sub>🚪 Debug Backdoor</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/syhnshn">
-<img src="https://github.com/syhnshn.png" width="80" style="border-radius:50%"><br>
-<sub><b>Seyhan Şahin</b></sub>
-</a>
-<br>
-<sub>🔄 CAN Reflection</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/KEREMONCEL">
-<img src="https://github.com/KEREMONCEL.png" width="80" style="border-radius:50%"><br>
-<sub><b>Kerem Öncel</b></sub>
-</a>
-<br>
-<sub>👤 Hayali İstasyon</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/adilenurygt">
-<img src="https://github.com/adilenurygt.png" width="80" style="border-radius:50%"><br>
-<sub><b>Adile Nur Yiğit</b></sub>
-</a>
-<br>
-<sub>📡 Frekans Geri Besleme</sub>
-</td>
-</tr>
-<tr>
-<td align="center" width="150">
-<a href="https://github.com/AhmetKucukkoylu">
-<img src="https://github.com/AhmetKucukkoylu.png" width="80" style="border-radius:50%"><br>
-<sub><b>Ahmet Küçükköylü</b></sub>
-</a>
-<br>
-<sub>🌉 Protocol Bridge</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/mirullaherbas">
-<img src="https://github.com/mirullaherbas.png" width="80" style="border-radius:50%"><br>
-<sub><b>Mirullah Erbaş</b></sub>
-</a>
-<br>
-<sub>🔋 V2G Deşarj</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/danyalocalir-tech">
-<img src="https://github.com/danyalocalir-tech.png" width="80" style="border-radius:50%"><br>
-<sub><b>Azad Öcalır</b></sub>
-</a>
-<br>
-<sub>🎮 Hijacked Controller</sub>
-</td>
-<td align="center" width="150">
-<a href="https://github.com/MesutAltunkaynak">
-<img src="https://github.com/MesutAltunkaynak.png" width="80" style="border-radius:50%"><br>
-<sub><b>M. Mesut Altunkaynak</b></sub>
-</a>
-<br>
-<sub>📴 CV Manipulation</sub>
-</td>
-</tr>
-</table>
+<a href="https://github.com/kosesena"><img src="https://avatars.githubusercontent.com/kosesena?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/huseyineneserturk"><img src="https://avatars.githubusercontent.com/huseyineneserturk?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/YusufKaya00"><img src="https://avatars.githubusercontent.com/YusufKaya00?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/muhammedemincmn"><img src="https://avatars.githubusercontent.com/muhammedemincmn?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/BesircanB"><img src="https://avatars.githubusercontent.com/BesircanB?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/syhnshn"><img src="https://avatars.githubusercontent.com/syhnshn?s=100" width="100" height="100" style="border-radius:50%"></a>
+
+<a href="https://github.com/KEREMONCEL"><img src="https://avatars.githubusercontent.com/KEREMONCEL?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/adilenurygt"><img src="https://avatars.githubusercontent.com/adilenurygt?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/AhmetKucukkoylu"><img src="https://avatars.githubusercontent.com/AhmetKucukkoylu?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/mirullaherbas"><img src="https://avatars.githubusercontent.com/mirullaherbas?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/danyalocalir-tech"><img src="https://avatars.githubusercontent.com/danyalocalir-tech?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/MesutAltunkaynak"><img src="https://avatars.githubusercontent.com/MesutAltunkaynak?s=100" width="100" height="100" style="border-radius:50%"></a>
+
+<br><br>
 
 </div>
+
+| | İsim | GitHub | Senaryo | Açıklama |
+|:---:|:-----|:------:|:-------:|:---------|
+| 🔐 | **Sena Köse** | [![GitHub](https://img.shields.io/badge/-kosesena-181717?style=flat-square&logo=github)](https://github.com/kosesena) | Firmware Manipulation | İmzasız firmware enjeksiyonu |
+| 👻 | **Hüseyin Enes Ertürk** | [![GitHub](https://img.shields.io/badge/-huseyineneserturk-181717?style=flat-square&logo=github)](https://github.com/huseyineneserturk) | Hayalet Şarj | Enerji hırsızlığı simülasyonu |
+| 💥 | **Yusuf Kaya** | [![GitHub](https://img.shields.io/badge/-YusufKaya00-181717?style=flat-square&logo=github)](https://github.com/YusufKaya00) | Operasyonel Felç | DoS ile sistem felci |
+| 🚌 | **Muhammed Emin Çimen** | [![GitHub](https://img.shields.io/badge/-muhammedemincmn-181717?style=flat-square&logo=github)](https://github.com/muhammedemincmn) | CAN Bus-Off | Bus kapatma saldırısı |
+| 🚪 | **Beşir Can Barutçu** | [![GitHub](https://img.shields.io/badge/-BesircanB-181717?style=flat-square&logo=github)](https://github.com/BesircanB) | Debug Backdoor | Arka kapı oluşturma |
+| 🔄 | **Seyhan Şahin** | [![GitHub](https://img.shields.io/badge/-syhnshn-181717?style=flat-square&logo=github)](https://github.com/syhnshn) | CAN Reflection | Harici yansıtma saldırısı |
+| 👤 | **Kerem Öncel** | [![GitHub](https://img.shields.io/badge/-KEREMONCEL-181717?style=flat-square&logo=github)](https://github.com/KEREMONCEL) | Hayali İstasyon | Sahte durum bildirimi |
+| 📡 | **Adile Nur Yiğit** | [![GitHub](https://img.shields.io/badge/-adilenurygt-181717?style=flat-square&logo=github)](https://github.com/adilenurygt) | Frekans Geri Besleme | CAN frekans manipülasyonu |
+| 🌉 | **Ahmet Küçükköylü** | [![GitHub](https://img.shields.io/badge/-AhmetKucukkoylu-181717?style=flat-square&logo=github)](https://github.com/AhmetKucukkoylu) | Protocol Bridge | Gizli talep manipülasyonu |
+| 🔋 | **Mirullah Erbaş** | [![GitHub](https://img.shields.io/badge/-mirullaherbas-181717?style=flat-square&logo=github)](https://github.com/mirullaherbas) | V2G Deşarj | Deşarj anomali tespiti |
+| 🎮 | **Azad Öcalır** | [![GitHub](https://img.shields.io/badge/-danyalocalir--tech-181717?style=flat-square&logo=github)](https://github.com/danyalocalir-tech) | Hijacked Controller | Ele geçirilmiş denetleyici |
+| 📴 | **Mehmet Mesut Altunkaynak** | [![GitHub](https://img.shields.io/badge/-MesutAltunkaynak-181717?style=flat-square&logo=github)](https://github.com/MesutAltunkaynak) | CV Manipulation | Çevrimdışı mod zorlama |
 
 <br>
 
