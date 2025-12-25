@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # ⚡ OCPP–CAN Güvenlik Laboratuvarı
@@ -500,19 +501,19 @@ streamlit run log_viewer/app.py
 
 <br>
 
-<a href="https://github.com/kosesena"><img src="https://avatars.githubusercontent.com/kosesena?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/huseyineneserturk"><img src="https://avatars.githubusercontent.com/huseyineneserturk?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/YusufKaya00"><img src="https://avatars.githubusercontent.com/YusufKaya00?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/muhammedemincmn"><img src="https://avatars.githubusercontent.com/muhammedemincmn?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/BesircanB"><img src="https://avatars.githubusercontent.com/BesircanB?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/syhnshn"><img src="https://avatars.githubusercontent.com/syhnshn?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/kosesena"><img src="https://github.com/kosesena.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/huseyineneserturk"><img src="https://github.com/huseyineneserturk.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/YusufKaya00"><img src="https://github.com/YusufKaya00.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/muhammedemincmn"><img src="https://github.com/muhammedemincmn.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/BesircanB"><img src="https://github.com/BesircanB.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/syhnshn"><img src="https://github.com/syhnshn.png?size=200" width="100" height="100" style="border-radius:50%"></a>
 
-<a href="https://github.com/KEREMONCEL"><img src="https://avatars.githubusercontent.com/KEREMONCEL?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/adilenurygt"><img src="https://avatars.githubusercontent.com/adilenurygt?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/AhmetKucukkoylu"><img src="https://avatars.githubusercontent.com/AhmetKucukkoylu?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/mirullaherbas"><img src="https://avatars.githubusercontent.com/mirullaherbas?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/danyalocalir-tech"><img src="https://avatars.githubusercontent.com/danyalocalir-tech?s=100" width="100" height="100" style="border-radius:50%"></a>
-<a href="https://github.com/MesutAltunkaynak"><img src="https://avatars.githubusercontent.com/MesutAltunkaynak?s=100" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/KEREMONCEL"><img src="https://github.com/KEREMONCEL.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/adilenurygt"><img src="https://github.com/adilenurygt.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/AhmetKucukkoylu"><img src="https://github.com/AhmetKucukkoylu.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/mirullaherbas"><img src="https://github.com/mirullaherbas.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/danyalocalir-tech"><img src="https://github.com/danyalocalir-tech.png?size=200" width="100" height="100" style="border-radius:50%"></a>
+<a href="https://github.com/MesutAltunkaynak"><img src="https://github.com/MesutAltunkaynak.png?size=200" width="100" height="100" style="border-radius:50%"></a>
 
 <br><br>
 
