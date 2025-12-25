@@ -45,6 +45,7 @@ gibi riskleri analiz etmek ve bu tehditlere karşı **anomali tespiti**, **gerç
 | **Beşir Can Barutçu** | CAN Bus Debug ile backdoor oluşturulması |
 | **Seyhan ŞAHİN** | Harici CAN Yansıtma (Reflection) ile Dahili Güç Elektroniği Manipülasyonu |
 | **Özgür Kerem ÖNCEL** | Hayali İstasyon - Sahte  Durum ile Operatör Sabotajı  |
+| **Azad Öcalır** | Elektrikli Araç Şarj Altyapısı Güvenliği |
 
 ---
 
